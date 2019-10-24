@@ -1,0 +1,22 @@
+fields:
+  active:
+    type: toggle
+  speed:
+    type: text
+    instructions: Set the speed of on-page movement (between 1-10)
+    validate: numeric
+    width: 50
+  timeout:
+    type: text
+    instructions: Set the amount of time (in seconds) before the effects are removed
+    validate: numeric
+    width: 50
+  blacklist_pages:
+    instructions: Paste in the urls of pages you do not wish to show the effects on
+    type: grid
+    fields:
+      url:
+        display: URL
+        type: text
+    add_row: Add another page
+      

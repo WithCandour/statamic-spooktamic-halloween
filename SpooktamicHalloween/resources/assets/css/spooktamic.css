@@ -1,0 +1,88 @@
+#spooktamic-ghost {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 145px;
+    height: 130px;
+    z-index: 9999;
+    pointer-events: none;
+    background: url("data:image/svg+xml,%3Csvg width='291' height='260' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill-rule='nonzero' fill='none'%3E%3Cpath fill='%23000' d='M30.57 122.27V76.42H15.28V137.55h15.29zM91.7 137.55v29.61h30.57v-29.61h-15.29zM15.28 137.55H0v30.57h15.28v-15.29zM30.57 137.55h15.28v15.28H30.57zM168.12 152.83h15.28v15.28h-15.28zM183.4 168.12h15.28v15.28H183.4zM183.4 137.55h15.28v15.28H183.4zM275.1 183.4h15.28v15.28H275.1zM259.81 183.4h15.29v-15.28h-30.57v15.28zM259.81 198.68h15.28v15.28h-15.28zM244.53 213.96h15.28v15.28h-15.28zM61.13 106.98h45.85V76.42H91.7V61.13H61.13V91.7zM152.83 106.98h15.29V76.42h-15.29V61.13h-30.56v45.85h15.28z'/%3E%3Cpath d='M259.81 183.4h-15.28v-15.28h-15.28v-91.7H214V45.85h-15.32V30.57h-30.56V15.28H91.7v15.29H61.13v15.28H45.85v30.57H30.57v61.13h15.28v15.28H30.57v-15.28H15.28v30.57h30.57v15.28h15.28v15.28h15.29V214h45.85v15.29h45.85v15.28H214v-15.32h30.57V214h15.28v-15.32h15.25V183.4h-15.29zM122.27 91.7V61.13h30.56v15.29h15.29V107h-45.85V91.7zm0 60.18v15.29H91.7v-29.62h30.57v14.33zm45.85 16.24v-15.29h15.28v-15.28h15.28v15.28H183.4v15.29h15.28v15.28H183.4v-15.28h-15.28zm-107-107H91.7v15.3H107V107H61.13V61.13l-.01-.01z' fill='%23FFF'/%3E%3Cpath fill='%23000' d='M229.25 106.98v61.14h15.28v-91.7h-15.28V91.7zM45.85 61.13V45.85H30.57v30.57h15.28zM45.85 30.57h15.28v15.28H45.85zM213.97 76.42h15.28V45.85h-15.28v15.28zM198.68 30.57h15.28v15.28h-15.28zM91.7 30.57V15.28H61.13v15.29h15.29zM183.4 30.57h15.28V15.28h-30.56v15.29zM30.57 168.12H15.28v15.28h30.57v-15.28zM229.25 229.25h-15.28v15.28h30.56v-15.28h-7.64zM183.4 244.53h-15.28v15.28H213.97v-15.28h-15.29zM152.83 229.25h-30.56v15.28H168.12v-15.28zM106.98 213.97H76.42v15.28H122.27v-15.28zM61.13 198.68h15.28v15.28H61.13zM45.85 183.4h15.28v15.28H45.85zM122.27 15.28H168.12V0H91.7v15.28h15.28z'/%3E%3C/g%3E%3C/svg%3E") 50% / contain no-repeat;
+    animation: float 1.6s ease-in-out infinite;
+    will-change: left, right, top, bottom;
+    transition: all ease-in-out;
+    -webkit-transition: all ease-in-out;
+}
+
+#spooktamic-ghost.ltr {
+    animation-name: float-reverse;
+}
+
+#spooktamic-ghost.removing {
+    animation: removing 0.4s ease-out;
+    animation-fill-mode: forwards;
+}
+
+#spooktamic-ghost.ltr.removing {
+    animation: removing-reverse 0.4s ease-out;
+}
+
+@keyframes float-reverse {
+    from,
+    to {
+        transform: translateY(0) scaleX(-1);
+        -webkit-transform: translateY(0) scaleX(-1);
+        opacity: 1;
+    }
+
+    25% {
+        opacity: .8;
+    }
+
+    50% {
+        
+        transform: translateY(35px) scaleX(-1);
+        -webkit-transform: translateY(35px) scaleX(-1);
+        opacity: 1;
+    }
+
+    75% {
+        opacity: .8;
+    }
+}
+
+@keyframes float {
+    from,
+    to {
+        transform: translateY(0);
+        -webkit-transform: translateY(0);
+        opacity: 1;
+    }
+
+    50% {
+        transform: translateY(35px);
+        -webkit-transform: translateY(35px);
+        opacity: .8;
+    }
+}
+
+@keyframes removing-reverse {
+    from {
+        opacity: 1;
+        transform: scaleX(-1);
+    }
+
+    to {
+        opacity: 0;
+        transform: scaleX(-1);
+    }
+}
+
+@keyframes removing {
+    from { 
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
