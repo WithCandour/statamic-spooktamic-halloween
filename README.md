@@ -2,6 +2,10 @@
 
 Make your content super spooky with this Halloween addon for Statamic.
 
+<div style="text-align:center;width:100%">
+<img src="https://raw.githubusercontent.com/WithCandour/statamic-spooktamic-halloween/master/docs/img/spooktamic.gif" alt="Spooktamic Halloween Gif" />
+</div>
+
 ## Installation
 To install this addon, copy the `SpooktamicHalloween` directory into your `site/addons` directory, you will need your license key from the Statamic marketplace.
 
